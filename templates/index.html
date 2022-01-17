@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <section id="navbar">
+      <div class="antialiased bg-gray-900">
+        <div class="w-full text-gray-200 bg-gray-800">
+          <div
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+          >
+            <div class="flex flex-row items-center justify-between p-4">
+              <a
+                href="#"
+                class="text-lg font-semibold tracking-widest uppercase rounded-lg text-white focus:outline-none focus:shadow-outline"
+                >MemeSharing</a
+              >
+            </div>
+            <nav
+              :class="{'flex': open, 'hidden': !open}"
+              class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+            >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:text-white hover:text-white text-gray-200 md:mt-0 md:ml-4"
+                href="#"
+                >Profile</a
+              >
+
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg bg-transparent hover:bg-gray-600 focus:bg-gray-600 focus:text-white hover:text-white text-gray-200 md:mt-0 md:ml-4"
+                href="#"
+                >Friends</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg bg-transparent hover:bg-gray-600 focus:bg-gray-600 focus:text-white hover:text-white text-gray-200 md:mt-0 md:ml-4"
+                href="#"
+                >Share</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <img
+            alt="ecommerce"
+            class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+            src="https://source.unsplash.com/400x400/?nature,water"
+          />
+          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <div class="flex flex-row w-10 h-10 relative mb-4">
+              <div
+                class="w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple cursor-pointer"
+              >
+                <img
+                  src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png"
+                  alt="lovely avatar"
+                  class="object-cover object-center w-full h-full visible"
+                />
+              </div>
+            </div>
+            <h1 class="text-white text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+            <p class="leading-relaxed">
+              Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia
+              microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn.
+              Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle
+              pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.
+            </p>
+            <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5"></div>
+            <div class="flex">
+              <!-- Button -->
+              <button
+                @click="showModal = !showModal"
+                class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+              >
+                Share
+              </button>
+
+              <button
+                class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
+              >
+                <svg
+                  fill="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
