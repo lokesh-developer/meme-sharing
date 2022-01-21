@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us:Memeshare </title>
+</head>
+<body>
+    <h1>
+        Contact us !
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar -->
+
+    <style>
+        /* RED BORDER ON INVALID INPUT */
+        .check input:invalid {
+            border-color: red;
+        }
+      
+        /* FLOATING LABEL */
+        .label-floating input:not(:placeholder-shown),
+        .label-floating textarea:not(:placeholder-shown) {
+            padding-top: 1.4rem;
+        }
+        .label-floating input:not(:placeholder-shown) ~ label,
+        .label-floating textarea:not(:placeholder-shown) ~ label {
+            font-size: 0.8rem;
+            transition: all 0.2s ease-in-out;
+            color: #1f9d55;
+            opacity: 1;
+        }
+      
+      </style>
+      <form id="contact-me" class="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 ">
+      
+      
+          <h2 class="w-full my-2 text-3xl font-bold leading-tight my-5">Contact form</h2>
+          <!-- name field -->
+          <div class="flex flex-wrap mb-6">
+              <div class="relative w-full appearance-none label-floating">
+                  <input class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="name" type="text" placeholder="Your name"required>
+                  <label for="name" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+                      Your name
+                  </label>
+              </div>
+          </div>
+          <!-- email field -->
+          <div class="flex flex-wrap mb-6">
+              <div class="relative w-full appearance-none label-floating">
+                  <input class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="name" type="text" placeholder="Your email"required>
+                  <label for="name" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+                      Your email
+                  </label>
+              </div>
+          </div>
+          <!-- Message field -->
+          <div class="flex flex-wrap mb-6">
+              <div class="relative w-full appearance-none label-floating">
+                  <textarea class="autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="message" type="text" placeholder="Message..."></textarea>
+                      <label for="message" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">Message...
+                  </label>
+              </div>
+          </div>
+      
+          <div class="">
+              <button class="w-full shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                  type="submit">
+                  Send
+              </button>
+      
+          </div>
+      </form>
+      
+      
+      <script>
+      
+      
+      //RED BORDER ON INVALID INPUT
+      document.getElementById('contact-me').addEventListener("invalid", function (event) {
+          this.classList.add('check');
+      }, true);
+      
+      
+      
+      
+          // TEXT AREA AUTO EXPAND
+      var textarea = document.querySelector('textarea.autoexpand');
+      
+      textarea.addEventListener('keydown', autosize);
+      
+      function autosize(){
+        var el = this;
+        setTimeout(function(){
+          el.style.cssText = 'height:auto; padding: 1.4rem .2rem .5rem';
+          
+          el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        },0);
+      }
+      
+      
+      
+      </script>
+</body>
+</html>
