@@ -4,7 +4,8 @@ from share import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('/about', views.about, name='about'),
-    path('/explore', views.explore, name='explore'),
-    path('/categories', views.categories, name='categories'),
+    path('share', views.share, name='share'),
+    path('login', views.login, name='login'),
+    path('register', views.register, name='register'),
+    path('categories', views.categories, name='categories'),
 ]
